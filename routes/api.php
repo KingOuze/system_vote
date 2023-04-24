@@ -67,14 +67,7 @@ Route::prefix('v1')->group(function(){ //Version 1 of my Rest API
 			Route::delete('{id}', 'API\v1\Partylist\DeleteController');
 			Route::put('{id}',	'API\v1\Partylist\UpdateController');
 		});
-
-		Route::prefix('nominee')->group(function(){
-			Route::post('', 'API\v1\Nominee\AddController');
-			Route::get('', 'API\v1\Nominee\GetController');
-			Route::delete('{id}', 'API\v1\Nominee\DeleteController');
-			Route::put('{id}', 'API\v1\Nominee\UpdateController');			
-		});
-
+	
 		Route::prefix('voter')->group(function(){
 			Route::post('', 'API\v1\Voter\AddController');
 			Route::get('', 'API\v1\Voter\GetController');
